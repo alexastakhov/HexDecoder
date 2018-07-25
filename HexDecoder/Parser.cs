@@ -11,8 +11,24 @@ namespace HexDecoder
     /// </summary>
     public static class Parser
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string CHARS = "0123456789abcdefABCDEF";
+
+        /// <summary>
+        /// 
+        /// </summary>
         private static List<byte> bytes = new List<byte>();
+
+        /// <summary>
+        /// 
+        /// </summary>
         private static List<string> bytesAsText = new List<string>();
+
+        /// <summary>
+        /// 
+        /// </summary>
         private static string outString = string.Empty;
 
         /// <summary>
@@ -24,11 +40,21 @@ namespace HexDecoder
         public static DecodeResult Decode(string inputText)
         {
             var separator = string.Empty;
-            var clearedText = inputText.Replace("\n", "").Replace("\t", "").Replace(" ","");
+            var clearedText = inputText.Replace("\n", "").Replace("\t", "").Replace(" ","").Replace(":", "").Replace("-", "");
             var tempByteAsString = string.Empty;
 
             for (int i = 0; i < clearedText.Length; i++)
             {
+                ////if (clearedText[i].)
+
+                if (tempByteAsString.Length < 2)
+                {
+
+                }
+                else
+                {
+
+                }
             }
 
             return null;
